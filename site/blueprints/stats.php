@@ -13,4 +13,4 @@ fields:
     text: >
       <div style="background-color: #FF8080; color: #4E4E4E; border-radius: 5px; padding: 5px;">Do not edit or delete. Statistics will be lost!<br /><br />      
       If you need to reset your statistics, deleting or renaming will be fine.<br />
-      This page will be recreated when the first page hits are logged.</color>
+      This page will be recreated when the first page hits are logged.</div>
