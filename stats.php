@@ -4,6 +4,13 @@
 $kirby->set('snippet',   'stats', __DIR__ . DS . 'snippets' . DS . 'stats.php');
 $kirby->set('widget',    'stats', __DIR__ . DS . 'widgets' . DS . 'stats');
 
+// Set options
+c::set('stats.roles.ignore','admin');
+c::set('stats.days',30);
+c::set('stats.session',false);
+c::set('stats.date.format','y-m-d');
+c::set('stats.format','absolute');
+
 /*
 Check if kirby language config is enabled.
 If it is, we need special rules to omit the language code later */
