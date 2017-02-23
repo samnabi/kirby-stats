@@ -1,5 +1,3 @@
-<?php if(!defined('KIRBY')) exit ?>
-
 pages: false
 files: false
 fields:
