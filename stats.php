@@ -4,7 +4,7 @@
 c::set('stats.roles.ignore','admin');
 c::set('stats.days',30);
 c::set('stats.session',false);
-c::set('stats.date.format','Y-m-d');
+c::set('stats.date.format','F d');
 c::set('stats.format','absolute');
 
 // Register extensions
