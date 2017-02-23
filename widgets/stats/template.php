@@ -53,7 +53,7 @@
 		</div>
 	</div>
 
-	<?php echo js("assets/js/Chart.min.js"); ?>
+	<?php echo js("assets/plugins/stats/js/Chart.min.js"); ?>
 	<script>
 	var ctx = document.getElementById("myChart").getContext("2d");
 	var data = {

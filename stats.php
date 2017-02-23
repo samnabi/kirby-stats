@@ -1,5 +1,9 @@
 <?php
 
+// Register extensions
+$kirby->set('snippet',   'stats', __DIR__ . DS . 'snippets' . DS . 'stats.php');
+$kirby->set('widget',    'stats', __DIR__ . DS . 'widgets' . DS . 'stats');
+
 /*
 Check if kirby language config is enabled.
 If it is, we need special rules to omit the language code later */
