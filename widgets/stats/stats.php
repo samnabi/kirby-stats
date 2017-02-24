@@ -1,6 +1,4 @@
 <?php
-require_once('helpers.php');
-
 return array(
 		'title' => 'Site stats',
 		'html'  => function() {

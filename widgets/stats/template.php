@@ -13,12 +13,12 @@
 	<div class="field">
 		<canvas id="myChart"></canvas>
 	</div>
-	<h2 class="hgroup hgroup-single-line cf">
+	<h2 class="hgroup hgroup-single-line hgroup-compressed cf">
 	    <span class="hgroup-title">Most visited pages</span>
 	</h2>
 	<div class="field">
-		<div class="dashboard-box">
-			<ul id="stats2" class="sidebar-list">
+		<div>
+			<ul id="stats2" class="nav nav-list sidebar-list">
 				<?php $site = kirby()->site();
 				// Determines if the list should link to the respective pages 
 				$links = c::get('stats.links', true);
@@ -47,7 +47,12 @@
 							break;
 					}
 					?>
-					<li><?= $open ?><?= $page ?><span style="position:absolute;right:10px" class="shiv shiv-left shiv-grey"><?= $value ?></span><?= $close ?></li>
+					<li>
+						<?= $open ?>
+						<?= $page ?>
+						<span style="position:absolute;padding-right: 10px;right:0;" class="shiv shiv-left shiv-white"><?= $value ?></span>
+						<?= $close ?>
+					</li>
 				<?php endforeach; ?>
 			</ul>
 		</div>
