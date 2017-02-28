@@ -19,14 +19,14 @@
 	<div class="field">
 		<div>
 			<ul id="stats2" class="nav nav-list sidebar-list">
-				<?php $site = kirby()->site();
+				<?php
 				// Determines if the list should link to the respective pages 
 				$links = c::get('stats.links', true);
 				// Detrmines the output format (absolut, percentage, both)
 				$format = c::get('stats.format', 'percentage');
 				foreach($data as $page => $hits):
 					if ($links) {
-						$open = '<a href="' . $site->url() . '/' . $page . '" target="_blank" ><i class="icon icon-left fa fa-file-o"></i>';
+						$open = '<a href="' . url('/'.$page) . '" target="_blank" ><i class="icon icon-left fa fa-file-o"></i>';
 						$close = '</a>';
 					} else {
 						$open = '<span style="padding: .5em 1em;display:block">';
