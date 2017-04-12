@@ -1,14 +1,19 @@
 pages: false
 files: false
+hide: true
+options:
+  visibility: false
+  url: false
+  preview: false
 fields:
   title:
     label: Title
     type:  text
+    readonly: true
   info:
-    label: Kirby Stats
+    label: Do not save or delete. Statistics will be lost!
     type: info
     icon: exclamation-triangle
     text: >
-      <div style="background-color: #FF8080; color: #4E4E4E; border-radius: 5px; padding: 5px;">Do not edit or delete. Statistics will be lost!<br /><br />      
-      If you need to reset your statistics, deleting or renaming will be fine.<br />
-      This page will be recreated when the first page hits are logged.</div>
+      If you need to reset your statistics, delete or save this page.<br />
+      This page will be recreated when the first page hits are logged.
