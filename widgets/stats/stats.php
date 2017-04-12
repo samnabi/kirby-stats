@@ -19,9 +19,10 @@ return array(
 			// We'll compare all other languages with them later to make sure we
 			// don't include the count for the default language multiple times just 
 			// because we don't have data for that language yet.
+			$days = c::get('stats.days', 5);
 			$data = $stats->pages()->yaml();
 			$hits = $stats->total_stats_count()->int();
-			$dates = $stats->dates()->yaml();
+			$dates = array_slice($stats->dates()->yaml(), $days * -1, $days, true);
 
 			$clean = array();
 			$history = array();

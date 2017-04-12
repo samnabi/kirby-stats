@@ -75,9 +75,6 @@ $total = (!$stats->total_stats_count()->isEmpty()) ? $stats->total_stats_count()
 $data[$param] = array('count' => $val);
 $dates[$date] = array('count' => $today);
 
-// keep only the last $days days
-$dates = array_slice($dates, $days * -1, $days, true);
-
 try {
 	$stats->update(array('pages' => yaml::encode($data), 'dates' => yaml::encode($dates), 'total_stats_count' => $total, ));
 } catch (Exception $e) {
