@@ -13,20 +13,20 @@
 	<div class="field">
 		<canvas id="myChart"></canvas>
 	</div>
-	<h2 class="hgroup hgroup-single-line cf">
+	<h2 class="hgroup hgroup-single-line hgroup-compressed cf">
 	    <span class="hgroup-title">Most visited pages</span>
 	</h2>
 	<div class="field">
-		<div class="dashboard-box">
-			<ul id="stats2" class="sidebar-list">
-				<?php $site = kirby()->site();
+		<div>
+			<ul id="stats2" class="nav nav-list sidebar-list">
+				<?php
 				// Determines if the list should link to the respective pages 
 				$links = c::get('stats.links', true);
 				// Detrmines the output format (absolut, percentage, both)
 				$format = c::get('stats.format', 'percentage');
 				foreach($data as $page => $hits):
 					if ($links) {
-						$open = '<a href="' . $site->url() . '/' . $page . '" target="_blank" ><i class="icon icon-left fa fa-file-o"></i>';
+						$open = '<a href="' . url('/'.$page) . '" target="_blank" ><i class="icon icon-left fa fa-file-o"></i>';
 						$close = '</a>';
 					} else {
 						$open = '<span style="padding: .5em 1em;display:block">';
@@ -47,7 +47,12 @@
 							break;
 					}
 					?>
-					<li><?= $open ?><?= $page ?><span style="position:absolute;right:10px" class="shiv shiv-left shiv-grey"><?= $value ?></span><?= $close ?></li>
+					<li>
+						<?= $open ?>
+						<?= $page ?>
+						<span style="position:absolute;padding-right: 10px;right:0;" class="shiv shiv-left shiv-white"><?= $value ?></span>
+						<?= $close ?>
+					</li>
 				<?php endforeach; ?>
 			</ul>
 		</div>
