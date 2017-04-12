@@ -34,7 +34,7 @@
 					}
 					$value;
 					switch ($format) {
-						case "absolut":
+						case "absolute":
 							$value = $hits;
 							break;
 
