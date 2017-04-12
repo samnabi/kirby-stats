@@ -1,11 +1,11 @@
 <?php
 
 // Set options
-c::set('stats.roles.ignore','admin');
-c::set('stats.days',14);
-c::set('stats.session',true);
-c::set('stats.date.format','D M d');
-c::set('stats.format','absolute');
+c::set('stats.roles.ignore', 'admin');
+c::set('stats.days', 14);
+c::set('stats.session', true);
+c::set('stats.date.format', 'D M d');
+c::set('stats.format', 'absolute');
 
 // Register extensions
 $kirby->set('widget',    'stats', __DIR__ . DS . 'widgets' . DS . 'stats');
