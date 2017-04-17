@@ -49,7 +49,7 @@
 					?>
 					<li>
 						<?= $open ?>
-						<?= $page ?>
+						<?= page($page)->title() ?>
 						<span style="position:absolute;padding-right: 10px;right:0;" class="shiv shiv-left shiv-white"><?= $value ?></span>
 						<?= $close ?>
 					</li>
