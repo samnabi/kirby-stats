@@ -76,7 +76,16 @@ $data[$param] = array('count' => $val);
 $dates[$date] = array('count' => $today);
 
 try {
-	$stats->update(array('pages' => yaml::encode($data), 'dates' => yaml::encode($dates), 'total_stats_count' => $total, ));
+	$fields = [
+		'pages' => yaml::encode($data),
+		'dates' => yaml::encode($dates),
+		'total_stats_count' => $total,
+	];
+	if ($site->defaultLanguage() !== null) {
+		$stats->update($fields, $site->defaultLanguage()->code());
+	} else {
+		$stats->update($fields);	
+	}
 } catch (Exception $e) {
 	echo $e->getMessage();
 	exit;
