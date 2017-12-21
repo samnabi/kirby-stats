@@ -1,0 +1,19 @@
+pages: false
+files: false
+hide: true
+options:
+  visibility: false
+  url: false
+  preview: false
+fields:
+  title:
+    label: Title
+    type:  text
+    readonly: true
+  info:
+    label: Do not save or delete. Statistics will be lost!
+    type: info
+    icon: exclamation-triangle
+    text: >
+      If you need to reset your statistics, delete or save this page.<br />
+      This page will be recreated when the first page hits are logged.

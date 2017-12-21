@@ -2,13 +2,8 @@
 return array(
 		'title' => 'Site stats',
 		'html'  => function() {
-			$site = site();
 			// Get the content in the default language
 			$stats = page('kirbystats');
-			/*if ($site->multilang()) {
-				$l = $site->defaultLanguage()->code();
-				$stats = $stats->content($l);
-			}**/
 			if (!$stats) {
 				return tpl::load(__DIR__ . DS . 'template.php', array('nodata' => true));
 			}
@@ -17,9 +12,10 @@ return array(
 			// We'll compare all other languages with them later to make sure we
 			// don't include the count for the default language multiple times just 
 			// because we don't have data for that language yet.
+			$days = c::get('stats.days', 5);
 			$data = $stats->pages()->yaml();
 			$hits = $stats->total_stats_count()->int();
-			$dates = $stats->dates()->yaml();
+			$dates = array_slice($stats->dates()->yaml(), $days * -1, $days, true);
 
 			$clean = array();
 			$history = array();
